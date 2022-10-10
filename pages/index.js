@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { fetchWeatherByCity } from "../utils/fetchAPI";
 import Search from "../components/Search";
+import Details from "../components/Details";
 
 export default function Home({ weather }) {
   const [city, setCity] = useState("tehran");
@@ -20,6 +21,7 @@ export default function Home({ weather }) {
     <div>
       <h1>Weather App</h1>
       <Search handleSearch={handleSearch} />
+      <Details weather={weather} />
     </div>
   );
 }
