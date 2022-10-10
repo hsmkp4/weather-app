@@ -6,6 +6,7 @@ const Search = ({ handleSearch }) => {
   const handleSub = (e) => {
     e.preventDefault();
     handleSearch(input);
+    setInput("");
   };
   return (
     <form

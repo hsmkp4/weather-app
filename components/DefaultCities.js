@@ -11,10 +11,10 @@ const DefaultCities = ({ handleSearch }) => {
       {TOP_CITIES.map((el) => (
         <p
           key={el}
-          className=" p-1 text-white rounded-md cursor-pointer text-sm lg:bg-slate-600 lg:p-4 lg:text-base"
+          className=" p-1 text-white rounded-md cursor-pointer text-sm lg:bg-slate-600 lg:p-4 "
           onClick={() => handleClick(el)}
         >
-          {el}
+          {el.toUpperCase()}
         </p>
       ))}
     </div>
