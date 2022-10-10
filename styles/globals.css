@@ -1,3 +1,13 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.search_btn {
+  @apply outline-none border-none  px-2 py-1 rounded-md bg-sky-600 text-white cursor-pointer;
+}
+.card {
+  @apply bg-zinc-300 rounded-lg p-4;
+}

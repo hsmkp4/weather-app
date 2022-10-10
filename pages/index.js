@@ -18,8 +18,8 @@ export default function Home({ weather }) {
     setCity(newCity);
   };
   return (
-    <div>
-      <h1>Weather App</h1>
+    <div className="container mx-auto flex flex-col items-center h-screen gap-6">
+      <h1 className="pt-8 text-2xl font-bold text-sky-700">Weather App</h1>
       <Search handleSearch={handleSearch} />
       <Details weather={weather} />
     </div>

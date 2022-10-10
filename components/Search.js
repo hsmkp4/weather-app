@@ -8,16 +8,18 @@ const Search = ({ handleSearch }) => {
     handleSearch(input);
   };
   return (
-    <form onSubmit={handleSub}>
-      <label>
-        <input
-          type="text"
-          placeholder="city"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-      </label>
-      <button>search</button>
+    <form
+      onSubmit={handleSub}
+      className="p-6 flex gap-2 w-full justify-center items-center"
+    >
+      <input
+        type="text"
+        placeholder="city"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className="outline-dotted outline-0 outline-sky-600 p-2 flex-1 rounded-md shadow-lg focus:outline-1 focus:shadow-none"
+      />
+      <button className="search_btn">search</button>
     </form>
   );
 };

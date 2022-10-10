@@ -12,28 +12,38 @@ const Details = ({ weather }) => {
   return (
     <div>
       <div>
-        <div>
-          <p>{modifyTemp(weather.main.temp)}&deg;C</p>
-          <div>
-            <p>{weather.name}</p>
-            <p>{hour}</p>
-            <p>{day}</p>
+        <div className="flex flex-col items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-4xl font-bold">
+              {modifyTemp(weather.main.temp)}&deg;C
+            </p>
+            <p className="text-2xl font-thin tracking-widest">{weather.name}</p>
+            <p className="text-gray-500 text-sm">{hour}</p>
+            <p className="text-gray-500 text-sm">{day}</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-between ">
             <Image
               src={`/icons/${weather.weather[0].icon}.png`}
               alt={weather.weather[0].description}
               width={50}
               height={50}
             />
-            <p>{weather.weather[0].description}</p>
+            <p className="text-gray-500 text-sm">
+              {weather.weather[0].description}
+            </p>
           </div>
         </div>
       </div>
-      <div>
-        <p>Real feel: {modifyTemp(weather.main.feels_like)}&deg;C </p>
-        <p>Humidity: {weather.main.humidity}% </p>
-        <p>Wind speed: {weather.wind.speed} Km/h </p>
+      <div className="flex flex-col items-center mt-8 card">
+        <p className="text-gray-500 text-sm">
+          Real feel: {modifyTemp(weather.main.feels_like)}&deg;C{" "}
+        </p>
+        <p className="text-gray-500 text-sm">
+          Humidity: {weather.main.humidity}%{" "}
+        </p>
+        <p className="text-gray-500 text-sm">
+          Wind speed: {weather.wind.speed} Km/h{" "}
+        </p>
       </div>
     </div>
   );
