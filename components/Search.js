@@ -17,7 +17,7 @@ const Search = ({ handleSearch }) => {
         placeholder="city"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="outline-dotted outline-0 outline-sky-600 p-2 flex-1 rounded-md shadow-lg focus:outline-1 focus:shadow-none"
+        className="outline-dotted outline-0 outline-sky-600 p-2 flex-1 rounded-md shadow-lg focus:outline-1 focus:shadow-none md:w-3/6 md:flex-none"
       />
       <button className="search_btn">search</button>
     </form>

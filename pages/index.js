@@ -27,8 +27,8 @@ export default function Home({ weather }) {
         <h1 className="pt-8 text-2xl font-bold text-sky-700">Weather App</h1>
         <Search handleSearch={handleSearch} />
         <Details weather={weather} />
+        <DefaultCities handleSearch={handleSearch} />
       </div>
-      <DefaultCities handleSearch={handleSearch} />
     </>
   );
 }
