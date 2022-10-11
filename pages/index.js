@@ -10,7 +10,6 @@ export default function Home({ weather }) {
   const [city, setCity] = useState("tehran");
   const router = useRouter();
 
-  console.log(weather);
   // make query params for each city
   useEffect(() => {
     router.push(`/?city=${city}`);

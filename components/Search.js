@@ -5,6 +5,7 @@ const Search = ({ handleSearch }) => {
 
   const handleSub = (e) => {
     e.preventDefault();
+    // user can't submit if input is empty
     if (input.length > 0) {
       handleSearch(input);
       setInput("");
