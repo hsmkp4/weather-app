@@ -5,8 +5,10 @@ const Search = ({ handleSearch }) => {
 
   const handleSub = (e) => {
     e.preventDefault();
-    handleSearch(input);
-    setInput("");
+    if (input.length > 0) {
+      handleSearch(input);
+      setInput("");
+    }
   };
   return (
     <form

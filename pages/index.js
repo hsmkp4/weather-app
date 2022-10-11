@@ -19,9 +19,7 @@ export default function Home({ weather }) {
   const handleSearch = (newCity) => {
     setCity(newCity);
   };
-  const handlePickCity = (ct) => {
-    setCity(ct);
-  };
+
   return (
     <>
       <Head>
@@ -37,9 +35,16 @@ export default function Home({ weather }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
+export async function getServerSideProps({ query, res }) {
   // fetch weather info in server side
   const weather = await fetchWeatherByCity(query["city"]);
+
+  // if client search wrong string
+  if (!weather) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
